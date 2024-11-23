@@ -70,4 +70,3 @@ Thank you for helping improve OriginVault!
 
 ## License
 This repository is licensed under the [MIT License](LICENSE).
-</div>
