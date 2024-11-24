@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Roles Schema",
+  "version": "1.0",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "role": {
+        "type": "string",
+        "description": "The name of the role (e.g., admin, editor, viewer)."
+      },
+      "permissions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of permissions associated with this role."
+      },
+      "weight": {
+        "type": "integer",
+        "description": "The weight of the role, used for prioritization or governance models."
+      }
+    },
+    "required": ["role", "permissions", "weight"]
+  },
+  "examples": [
+    [
+      {
+        "role": "admin",
+        "permissions": ["read", "write", "delete"],
+        "weight": 10
+      },
+      {
+        "role": "viewer",
+        "permissions": ["read"],
+        "weight": 1
+      }
+    ]
+  ]
+}
