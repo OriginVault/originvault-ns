@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Advanced Permissions Schema",
+  "title": "Permissions Schema",
   "version": "1.0",
   "type": "array",
   "items": {
