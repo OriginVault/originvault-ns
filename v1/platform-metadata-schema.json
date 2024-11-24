@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Platform Metadata",
+  "version": "1.0",
+  "type": "object",
+  "properties": {
+    "platformName": {
+      "type": "string",
+      "description": "Name of the platform (e.g., OriginVault)"
+    },
+    "platformVersion": {
+      "type": "string",
+      "description": "Version of the platform (e.g., 1.2.3)"
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["production", "staging", "development"],
+      "description": "Deployment environment"
+    },
+    "configurations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Key-value pairs for specific configuration details"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the dependency (e.g., IPFS)"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version of the dependency"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL or identifier of the dependency"
+          }
+        },
+        "required": ["name", "version"]
+      },
+      "description": "List of dependencies or services used by the platform"
+    },
+    "generatedTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp for when the metadata was generated"
+    }
+  },
+  "required": ["platformName", "platformVersion", "environment"]
+}
