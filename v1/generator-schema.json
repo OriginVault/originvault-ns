@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generator Metadata",
+  "version": "1.0",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the generator (e.g., software, process, entity)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the generator (e.g., 1.2.3)"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of generator (e.g., software, algorithm, service)"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL or identifier for the generator"
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Parameters or configuration used by the generator"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp for when the generator ran"
+    }
+  },
+  "required": ["name", "version", "type"]
+}
