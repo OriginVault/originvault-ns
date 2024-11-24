@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Advanced Permissions Schema",
+  "version": "1.0",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string",
+        "description": "The action or capability (e.g., read, write, delete)."
+      },
+      "resource": {
+        "type": "string",
+        "description": "The resource to which the permission applies (e.g., document, user)."
+      }
+    },
+    "required": ["action", "resource"]
+  },
+  "examples": [
+    [
+      { "action": "read", "resource": "document" },
+      { "action": "write", "resource": "content" }
+    ]
+  ]
+}
