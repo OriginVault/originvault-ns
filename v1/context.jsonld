@@ -5,7 +5,45 @@
     "type": "@type",
     "created": "http://schema.org/dateCreated",
     "updated": "http://schema.org/dateModified",
-    "timestamp": "http://schema.org/DateTime",
+    "platformMetadata": {
+      "@id": "https://namespaces.originvault.io/v1#platformMetadata",
+      "@type": "@json"
+    },
+    "generator": {
+      "@id": "https://namespaces.originvault.io/v1#generator",
+      "@type": "@json"
+    },
+    "platform": "https://namespaces.originvault.io/v1#platform",
+    "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "version": {
+      "@id": "https://namespaces.originvault.io/v1#version",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "service": {
+      "@id": "https://namespaces.originvault.io/v1#service",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "generatedBy": {
+      "@id": "https://namespaces.originvault.io/v1#generatedBy",
+      "@type": "@json"
+    },
+    "generationDetails": {
+      "@id": "https://namespaces.originvault.io/v1#generationDetails",
+      "@type": "@json"
+    },
+    "method": {
+      "@id": "https://namespaces.originvault.io/v1#method",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inputs": {
+      "@id": "https://namespaces.originvault.io/v1#inputs",
+      "@type": "@json"
+    },
+    "namespace": {
+      "@id": "https://namespaces.originvault.io/v1#namespace",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "authentication": {
       "@id": "https://w3id.org/security#authenticationMethod",
       "@container": "@set"
@@ -30,52 +68,46 @@
       "@id": "https://w3id.org/security#serviceEndpoint",
       "@type": "@json"
     },
-    "signature": {
-      "@id": "https://w3id.org/security#proof",
-      "@type": "@json"
-    },
-    "publicKey": "https://w3id.org/security#publicKey",
-
-    "platformMetadata": {
-      "@id": "https://namespaces.originvault.io/v1#platformMetadata",
-      "@type": "@json"
-    },
-    "generator": {
-      "@id": "https://namespaces.originvault.io/v1#generator",
-      "@type": "@json"
-    },
-    "platform": "https://namespaces.originvault.io/v1#platform",
-    "version": "https://namespaces.originvault.io/v1#version",
-    "service": "https://namespaces.originvault.io/v1#service",
-    "generatedBy": "https://namespaces.originvault.io/v1#generatedBy",
-    "generationDetails": {
-      "@id": "https://namespaces.originvault.io/v1#generationDetails",
-      "@type": "@json"
-    },
-    "method": "https://namespaces.originvault.io/v1#method",
-    "inputs": {
-      "@id": "https://namespaces.originvault.io/v1#inputs",
-      "@type": "@json"
-    },
-    "namespace": "https://namespaces.originvault.io/v1#namespace",
     "hashes": {
       "@id": "https://namespaces.originvault.io/v1#hashes",
       "@container": "@set"
     },
-    "hash": "https://namespaces.originvault.io/v1#hash",
-    "position": "https://namespaces.originvault.io/v1#position",
+    "hash": {
+      "@id": "https://namespaces.originvault.io/v1#hash",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "position": {
+      "@id": "https://namespaces.originvault.io/v1#position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "sequence": {
       "@id": "https://namespaces.originvault.io/v1#sequence",
       "@container": "@list"
     },
-    "operation": "https://namespaces.originvault.io/v1#operation",
-    "algorithm": "https://namespaces.originvault.io/v1#algorithm",
-    "value": "https://namespaces.originvault.io/v1#value",
+    "operation": {
+      "@id": "https://namespaces.originvault.io/v1#operation",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "algorithm": {
+      "@id": "https://namespaces.originvault.io/v1#algorithm",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "signature": {
+      "@id": "https://w3id.org/security#proof",
+      "@type": "@json"
+    },
+    "value": {
+      "@id": "https://namespaces.originvault.io/v1#value",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "multiSignature": {
       "@id": "https://namespaces.originvault.io/v1#multiSignature",
       "@type": "@json"
     },
-    "threshold": "https://namespaces.originvault.io/v1#threshold",
+    "threshold": {
+      "@id": "https://namespaces.originvault.io/v1#threshold",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "roles": {
       "@id": "https://namespaces.originvault.io/v1#roles",
       "@type": "@json"
